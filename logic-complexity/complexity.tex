@@ -1,0 +1,66 @@
+\documentclass[preview,border=10pt,12pt]{standalone}
+% border: 边距
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{amsfonts}
+\usepackage{stmaryrd} %% \llbracket \rrbracket
+
+\usepackage{graphicx}
+\usepackage{color}
+
+\usepackage{tikz}\usetikzlibrary{backgrounds}
+%%=============================================================================
+\begin{document}
+
+
+
+
+\[
+    sdfasdfqweasdfs
+\]
+
+
+
+
+% figure
+\begin{figure}[ht!]
+    \centering
+    \begin{tikzpicture}[node distance=1.5cm]
+        \node (p) at (0,0) {$\mathrm{P}$};
+        \node (s1) [right of=p] {$\subseteq$};
+        \node (np) [right of=s1] {$\mathrm{NP}$};
+        \node (s2) [right of=np] {$\subseteq$};
+        \node (pspace) [right of=s2] {$\mathrm{PSPACE}$};
+        \node (s3) [right of=pspace] {$\subseteq$};
+        \node (exptime) [right of=s3] {$\mathrm{EXPTIME}$};
+
+        
+        \draw (p) to [bend left]node[fill=white]{$\not=$} (exptime);
+
+
+        \node ()
+    \end{tikzpicture}
+\end{figure}
+
+
+ddd
+
+$ddd$
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%%=============================================================================
+\end{document}

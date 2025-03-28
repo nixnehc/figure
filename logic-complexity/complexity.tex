@@ -1,4 +1,4 @@
-\documentclass[preview,border=10pt,12pt]{standalone}
+\documentclass[a4paper,12pt]{article}
 % border: 边距
 \usepackage{amsmath}
 \usepackage{amsthm}
@@ -9,18 +9,38 @@
 
 \usepackage{graphicx}
 \usepackage{color}
+\usepackage{geometry}
+\geometry{left=2cm,right=2cm,top=1.5cm,bottom=1.5cm}
 
 \usepackage{tikz}\usetikzlibrary{backgrounds}
 %%=============================================================================
 \begin{document}
 
 
+\begin{itemize}
+    \item 
+    For deterministic classes, $\mathcal{C} = $ co-$\mathcal{C}$.
+
+    \item $\mathrm{P}$ is considered the only \textit{tractable} complexity class.
+
+    \item \textbf{Satisfiability} and \textbf{validity} are complementary problems, 
+    hence determining that satisfiability is in $\mathcal{C}$ immediately implies that validity is in co-$\mathcal{C}$,  
+    and vice versa.
+
+    \item 
+\end{itemize}
 
 
 \[
     sdfasdfqweasdfs
 \]
 
+
+\[\begin{array}{ccccccccccccc}
+    \mathrm{P} & \subseteq & \mathrm{NP} & \subseteqq & \mathrm{PSPACE} & \subseteq & \mathrm{EXPTIME} & \subseteq & \mathrm{NEXPTIME} & \subseteq \\   
+
+    &  \subseteq & \mathrm{EXPSPACE} & \subseteq & \mathrm{2EXPTIME} & \subseteq & \mathrm{N2EXPTIME} & \cdots & \mathrm{ELEM} \\
+\end{array}\]
 
 
 
@@ -32,22 +52,18 @@
         \node (s1) [right of=p] {$\subseteq$};
         \node (np) [right of=s1] {$\mathrm{NP}$};
         \node (s2) [right of=np] {$\subseteq$};
-        \node (pspace) [right of=s2] {$\mathrm{PSPACE}$};
+        \node (pspace) [right of=s2] {\textsc{PSpace}};
         \node (s3) [right of=pspace] {$\subseteq$};
-        \node (exptime) [right of=s3] {$\mathrm{EXPTIME}$};
+        \node (exptime) [right of=s3] {\textsc{ExpTime}};
 
         
         \draw (p) to [bend left]node[fill=white]{$\not=$} (exptime);
 
-
-        \node ()
     \end{tikzpicture}
 \end{figure}
 
 
-ddd
-
-$ddd$
+\vspace{1.5em}
 
 
 
@@ -56,11 +72,134 @@ $ddd$
 
 
 
+\begin{table}[ht!]
+    \begin{center}
+    \renewcommand{\arraystretch}{1.3} % 行距
+    \renewcommand{\arraycolsep}{1.2em} % 列距
+    \begin{tabular}{c|lllr}
+    \hline
+    P & 
+    \\
+    
+    
+    \rotatebox[origin=c]{270}{$\subseteq$} \\
+
+    
+    NP & 
+    $PL_{Sat} = \mathbf{S5}_{Sat}$: NP-complete &
+    & 
+    $PL_{Valid}$: co-NP-complete\\
+
+    
+    \rotatebox[origin=c]{270}{$\subseteq$} \\
+
+    
+    \textsc{PSpace} & 
+    $\mathbf{K}_{Sat} = \mathbf{T}_{Sat} = \mathbf{S4}_{Sat} =  QBF_{Sat}$ = $QBF_{Valid}$: \textsc{PSpace}-complete\\
+
+    
+    \rotatebox[origin=c]{270}{$\subseteq$} \\
+
+    
+    \textsc{ExpTime} & 
+    $PDL_{Sat}$ = $PDL_{Valdi}$: \textsc{ExpTime}-complete \\
+
+
+    \hline
+\end{tabular}
+\end{center}
+
+\vspace{1.5em}
+
+$PL$: propositional logic. \\
+$QBF$: the logic of quantified Boolean formulas. \\
+$PDL$: propositional dynamic logic. \\
+\end{table}
 
 
 
+PSPACE and EXPTIME are deterministic complexity classes, co-PSPACE is identical to PSPACE and co-EXPTIME is identical to EXPTIME
+
+
+
+
+
+\vspace{1.5em}
+
+
+
+
+\begin{table}[htp!]
+    \caption{The complexity of the satisfiability problem for modal logics.}
+    \vspace{1em}
+    \begin{center}
+    \label{tab: complexity-of-modal-logic}
+    \renewcommand{\arraystretch}{1.5} % 行距
+    \renewcommand{\arraycolsep}{1.2} % 列距
+    \begin{tabular}{lll}
+    \hline
+    NP-complete & \textsc{PSpace}-complete &  \textsc{ExpTime}-complete  \\
+    \hline
+
+    PL, $\mathbf{S5}, \mathbf{KD45}$ 
+    & 
+    $\mathbf{K}_n, \mathbf{T}_n, \mathbf{S4}_n$, $n \geq 1$
+    & 
+    $\mathbf{K}^C_n, \mathbf{T}^C_n$, $n \geq 1$
+    \\
+
+
+    & 
+    $\mathbf{S5}_n, \mathbf{KD45}_n$, $n \geq 2$ 
+    &
+    $\mathbf{S4}^C_n,\mathbf{S5}^C_n, \mathbf{KD45}^C_n$, $n \geq 2$ 
+    \\
+
+
+    $\mathbf{S4.3}+$
+    & 
+    $\mathbf{QBF}$ 
+    &   
+    $\mathbf{PDL}$ \\
+
+    &
+    &
+    $\mathbf{K}^{\mathsf{E,A}}$ \\
+
+    &
+    $\mathbf{S5} \times \mathbf{S5}$ 
+    &  \\ 
+
+
+    \hline
+\end{tabular}
+\end{center}
+
+
+
+\begin{itemize}
+    \item See [Halpern and Moses, 1992, Table 1, p. 350]
+    \item $C$: the logic with common knowledge operator
+    \item $D$: adding distributed knowledge (intersection operator) to the language does not affect the complexity
+    
+    \item  in these cases of single-agent for $\mathbf{S4}^C$, $\mathbf{S5}^C$ and $\mathbf{KD45}^C$, 
+     common knowledge reduces to knowledge. 
+
+     \item 
+     $\mathbf{S4.3}+$: any (consistent) normal extension of $\mathbf{S4.3}$. \\
+     \textsf{Hemaspaandra's Theorem}: every normal logic extending $\mathbf{S4.3}$ is NP-complete.
+
+     \item 
+     $\mathbf{K}^{\mathsf{E,A}}$: 
+     the expansion of modal logic $\mathbf{K}$ with the universal modality.
+\end{itemize}
+
+
+
+
+\end{table}
 
 
 
 %%=============================================================================
-\end{document}
+\end{document} 

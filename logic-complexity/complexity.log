@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.9.11)  29 MAR 2025 15:13
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.9.11)  1 APR 2025 16:28
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -459,17 +459,16 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Trying to load font information for U+stmry on input line 22.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/stmaryrd/Ustmry.fd)
-Underfull \hbox (badness 10000) in paragraph at lines 114--117
 
- []
+LaTeX Warning: Float too large for page by 47.91948pt on input line 208.
 
 [1
 
-] [2] [3]
-LaTeX Font Info:    Trying to load font information for U+euf on input line 244.
+] [2]
+LaTeX Font Info:    Trying to load font information for U+euf on input line 236.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
-) [4
+) [3
 
 ] (./complexity.aux)
  ***********
@@ -480,10 +479,10 @@ L3 programming layer <2024-02-20>
 Here is how much of TeX's memory you used:
  14445 strings out of 474773
  289816 string characters out of 5757724
- 1932839 words of memory out of 5000000
+ 1933839 words of memory out of 5000000
  36332 multiletter control sequences out of 15000+600000
  565925 words of font info for 73 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 84i,12n,93p,441b,800s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,12n,93p,441b,802s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on complexity.pdf (4 pages).
+Output written on complexity.pdf (3 pages).

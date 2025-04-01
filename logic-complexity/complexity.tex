@@ -28,18 +28,39 @@
     and vice versa.
 
     \item 
+    SAVITCH, W. J. (1970), Relationship between nondeterministic and deterministic tape
+complexities, J. Comput. System Sci. 4, 177-192.: PSPACE = NPSPACE
+
+\item 
+    \item 
+    PSPACE and EXPTIME are deterministic complexity classes, co-PSPACE is identical to PSPACE and co-EXPTIME is identical to EXPTIME
 \end{itemize}
 
 
-\[
-    sdfasdfqweasdfs
-\]
+\vspace{1.5em}
 
 
 \[\begin{array}{ccccccccccccc}
-    \mathrm{P} & \subseteq & \mathrm{NP} & \subseteqq & \mathrm{PSPACE} & \subseteq & \mathrm{EXPTIME} & \subseteq & \mathrm{NEXPTIME} & \subseteq \\   
+    \mathrm{P} & \subseteq & \mathrm{NP} & \subseteqq & \mathrm{PSPACE}=\mathrm{NSPACE} & \subseteq & \mathrm{EXPTIME} & \subseteq & \mathrm{NEXPTIME}  \\
+    
+    \\ 
 
-    &  \subseteq & \mathrm{EXPSPACE} & \subseteq & \mathrm{2EXPTIME} & \subseteq & \mathrm{N2EXPTIME} & \cdots & \mathrm{ELEM} \\
+    &&&&&&&& \rotatebox[origin=c]{270}{$\subseteq$} \\   
+
+    \\
+
+    &
+    \mathrm{ELEM} & \cdots &
+    \supseteq & 
+    \mathrm{N2EXPTIME} & 
+    \supseteq & 
+    \mathrm{2EXPTIME} & 
+    \supseteq & 
+    \mathrm{EXPSPACE}   \\
+
+
+
+
 \end{array}\]
 
 
@@ -72,53 +93,9 @@
 
 
 
-\begin{table}[ht!]
-    \begin{center}
-    \renewcommand{\arraystretch}{1.3} % 行距
-    \renewcommand{\arraycolsep}{1.2em} % 列距
-    \begin{tabular}{c|lllr}
-    \hline
-    P & 
-    \\
-    
-    
-    \rotatebox[origin=c]{270}{$\subseteq$} \\
-
-    
-    NP & 
-    $PL_{Sat} = \mathbf{S5}_{Sat}$: NP-complete &
-    & 
-    $PL_{Valid}$: co-NP-complete\\
-
-    
-    \rotatebox[origin=c]{270}{$\subseteq$} \\
-
-    
-    \textsc{PSpace} & 
-    $\mathbf{K}_{Sat} = \mathbf{T}_{Sat} = \mathbf{S4}_{Sat} =  QBF_{Sat}$ = $QBF_{Valid}$: \textsc{PSpace}-complete\\
-
-    
-    \rotatebox[origin=c]{270}{$\subseteq$} \\
-
-    
-    \textsc{ExpTime} & 
-    $PDL_{Sat}$ = $PDL_{Valdi}$: \textsc{ExpTime}-complete \\
-
-
-    \hline
-\end{tabular}
-\end{center}
-
-\vspace{1.5em}
-
-$PL$: propositional logic. \\
-$QBF$: the logic of quantified Boolean formulas. \\
-$PDL$: propositional dynamic logic. \\
-\end{table}
 
 
 
-PSPACE and EXPTIME are deterministic complexity classes, co-PSPACE is identical to PSPACE and co-EXPTIME is identical to EXPTIME
 
 
 
@@ -130,7 +107,7 @@ PSPACE and EXPTIME are deterministic complexity classes, co-PSPACE is identical 
 
 
 \begin{table}[htp!]
-    \caption{The complexity of the satisfiability problem for modal logics.}
+    \caption{The complexity of the \textit{satisfiability} problem for modal logics.}
     \label{tab: complexity-of-modal-logic}
     \vspace{.3em}
     \begin{center}
@@ -175,11 +152,13 @@ PSPACE and EXPTIME are deterministic complexity classes, co-PSPACE is identical 
     &
     $\mathbf{S5} \times \mathbf{S5}$, $\mathbf{S5} \times \mathbf{K}$   \\ 
 
-    
- 
-
     &&&& 
     $\mathbf{S5}^n$ for $n \geq 3$,  \\
+
+
+    & 
+    $\mathbf{LTL}$  \\
+ 
     
     $n \times n$ tiling ($n$ in unary)  &&&
     $n \times n$ tiling ($n$ in binary) &
@@ -192,6 +171,15 @@ PSPACE and EXPTIME are deterministic complexity classes, co-PSPACE is identical 
 
 \begin{itemize}
     \item Cf. [Halpern and Moses, 1992, Table 1, p. 350]
+    
+
+    \item $\mathbf{PL}$: propositional logic. 
+
+
+    \item $\mathbf{QBF}$: the logic of quantified Boolean formulas. 
+    
+
+    \item $\mathbf{PDL}$: propositional dynamic logic. 
     
     \item In the unary numeral system, $0$ is represented by the empty string $\epsilon$, numbers $1,2,3,\dots$ are represented in unary as $1, 11, 111, \dots$.
 
@@ -208,6 +196,10 @@ PSPACE and EXPTIME are deterministic complexity classes, co-PSPACE is identical 
      \item 
      $\mathbf{K}^{\mathsf{E,A}}$: 
      the expansion of modal logic $\mathbf{K}$ with the universal modality.
+     
+    \item 
+    $\mathbf{LTL}$: propositional (linear) temporal logic with four temporal operators, 
+    $\bigcirc$ (next), $\Diamond$ (future / eventually), $\Box$ (always) and $U$ (until).
 \end{itemize}
 
 
